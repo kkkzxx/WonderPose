@@ -269,16 +269,16 @@ class Pose():
                 result=int(4)
             print('Result==========>', result)
             return result,vis_imgs
-#
-# def read_files(path):
-#     files=[]
-#     for img in os.listdir(path):
-#         files.append(os.path.join(path,img))
-#     files.sort()
-#     return files
-#
-# Pose_model=Pose(opt)
-# images=read_files('/home/kkkzxx/Desktop/pose/4')
-# r,ims=Pose_model.predict(images)
-# cv2.imshow('img',ims[0])
-# cv2.waitKey()
+
+def read_files(path):
+    files=[]
+    for img in os.listdir(path):
+        files.append(os.path.join(path,img))
+    files.sort()
+    return files
+
+Pose_model=Pose(opt)
+images=read_files('/home/kkkzxx/Desktop/pose/4')
+r,ims=Pose_model.predict(images)
+cv2.imshow('img',ims[0])
+cv2.waitKey()
